@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(to left, #cff4d2, #7ce495);
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: rgba(53, 157, 158, .5);
+    width: 100%;
+    height: 50px;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+.header_logo {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header_image {
+    width: 50px;
+    transition: .5s;
+}
+
+.header_image:hover {
+    transform: rotate(45deg);
+}
+
+.header_text {
+    margin: 0 10%;
+    font-size: 1.9em;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.header_menu ul {
+    display: inline-flex;
+    justify-content: space-around;
+}
+
+.header_menu ul li {
+    list-style: none;
+    border-right: 1px solid rgba(255, 255, 255, .5);
+}
+
+.header_menu ul li:nth-child(3) {
+    border-right: none;
+}
+
+.header_menu ul li a {
+    color: rgb(255, 255, 255);
+    padding: 0 30px;
+}
+
+.header_menu ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/********************/
+
+.container {
+    margin: 100px 10%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.container .box {
+    position: relative;
+    margin-top: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.box_image {
+    width: 300px;
+    height: 232px;
+    background-color: black;
+}
+
+.box_image img {
+    width: 300px;
+    position: absolute;
+}
+
+.box span {
+    margin-top: -300px;
+    margin-left: -150px;
+    position: absolute;
+    content: ' ';
+    width: 20px;
+    height: 157%;
+    backdrop-filter: blur(5px);
+    z-index: 10;
+    transform: rotate(-45deg);
+    transition: 1.5s;
+}
+
+.box:hover span {
+    margin-left: 500px;
+}
+
+.box_text {
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    backdrop-filter: blur(3px);
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 500;
+}
+
+.box:hover .box_text {
+    transform: translateY(-100%);
+    opacity: 1;
+}
+
+.box_text h1,
+.box_text p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
